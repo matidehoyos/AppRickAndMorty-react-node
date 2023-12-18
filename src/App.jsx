@@ -1,13 +1,18 @@
 import axios from 'axios';
 import { useState } from 'react';
+import { Route, Routes, useLocation, useNavigate } from "react-router-dom";
 import './App.css';
 import Cards from './components/cards/Cards.jsx';
 import Nav from './components/nav/Nav.jsx';
+import About from './components/about/About.jsx';
+import Detail from './components/detail/Detail.jsx';
+import NotFound from './components/notFound/notfound.jsx';
 
 
 function App() {
 
   const [characters, setCharacters] = useState([]);
+  const navigate = useNavigate();
 
    function onSearch(id) {
       const characterId = characters.filter(
@@ -26,6 +31,7 @@ function App() {
             }
          } 
          ); 
+         navigate('/home');
    }
 
    function onClose(id) {
@@ -36,7 +42,25 @@ function App() {
    return (
       <div className='App'>
          <Nav onSearch={onSearch} />
-         <Cards characters={characters} onClose={onClose} />
+         <Routes>
+            <Route
+               path='/home'
+               element={<Cards characters={characters} onClose={onClose} />}>
+            </Route>
+            <Route
+               path='/about'
+               element={<About />}>
+            </Route>
+            <Route
+               path='/detail/:id'
+               element={<Detail />}>
+            </Route>
+            <Route 
+               path='*'
+               element={<NotFound />}>
+            </Route>
+         </Routes>
+         
       </div>
    );
 }

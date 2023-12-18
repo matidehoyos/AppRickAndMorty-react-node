@@ -15,6 +15,11 @@ export default function SearchBar(props) {
       setId("");
    }
 
+   const handleRandon = () => {
+         const randomNumber = Math.floor(Math.random() * 826) + 1;
+         props.onSearch(randomNumber);
+   }
+
    return (
       <div>
           <input 
@@ -25,6 +30,7 @@ export default function SearchBar(props) {
             onChange={handleChange} 
          />
           <button onClick={handleClick}>Agregar</button> 
+          <button onClick={handleRandon}>Random</button>
       </div>
    );
 }

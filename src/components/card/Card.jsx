@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function Card(props) {
    return (
       <div
@@ -7,7 +9,7 @@ export default function Card(props) {
             padding: "20px",
             BorderRadius: "15px",
          }}
-         
+        
       >
          <button onClick={() => props.onClose(props.id)}>X</button>
          <h2>{props.name}</h2>
@@ -16,7 +18,9 @@ export default function Card(props) {
          <h4>Specie: {props.species}</h4>
          <h4>Gender: {props.gender}</h4>
          <h4>Origin: {props.origin}</h4>
+         <Link to={`/detail/${props.id}`} >
          <img src={props.image} alt={props.name} />
+         </Link>
       </div>
    );
 }
