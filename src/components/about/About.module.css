@@ -1,0 +1,36 @@
+.container {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    background-image: url("https://c4.wallpaperflare.com/wallpaper/791/407/687/minimalism-silhouette-cartoon-sanchez-wallpaper-preview.jpg");
+    background-size: cover;
+}
+
+.txtAbout {
+    width: 600px;
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(32, 32, 32, .9);
+    border: 1px solid rgba(256, 256, 256, .8);
+    border-radius: 15px;
+}
+
+.txt {
+    width: 300px;
+    text-align: left;
+}
+
+h3 {
+    font-size: 3rem;
+    font-weight: 500;
+}
+
+.parrafo {
+    font-size: 1.5rem;
+}
+
+img {
+    width: 200px;
+}

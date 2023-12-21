@@ -1,14 +1,11 @@
 import Card from "../card/Card";
+import style from "./Cards.module.css";
 
 
 export default function Cards({characters, onClose}) {
    return (
    <div
-      style={{
-         display:"flex",
-         flexWrap:"wrap",
-         justifyContent:"space-evenly"
-      }}
+       className={style.container}
       >   
 
       {

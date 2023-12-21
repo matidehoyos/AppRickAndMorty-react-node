@@ -1,0 +1,30 @@
+.container {
+    width: auto;
+    height: auto;
+    padding: 10px 20px;
+    margin: 10px 0px;
+    background-color: rgba(17,17,17,1);
+    border: .5px solid rgba(256,256,256,.8);
+    border-radius: 15px;
+    line-height: 18px;
+    text-align: left;
+}
+
+.botonCerrar {
+    font-size: 1.3rem;
+    color: rgb(238, 32, 32);
+    border: 1px solid rgb(238, 32, 32);
+    background-color: transparent;
+    padding: 4px;
+}
+
+h2 {
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: rgb(0, 255, 0);
+}
+
+img {
+    width: 200px;
+    border-radius: 15px;
+}
