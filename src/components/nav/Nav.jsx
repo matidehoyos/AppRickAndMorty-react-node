@@ -10,6 +10,9 @@ export default function Nav(props) {
               <NavLink to='/home'>
                 <button className={style.menuBoton}>Home</button> 
               </NavLink>
+              <NavLink to='/favorites'>
+                <button className={style.menuBoton} >Favorites</button> 
+              </NavLink>
               <NavLink to='/about'>
                 <button className={style.menuBoton}>About</button> 
               </NavLink> 

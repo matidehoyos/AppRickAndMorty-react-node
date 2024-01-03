@@ -10,3 +10,8 @@
         background-repeat: no-repeat;
         background-position: center;
 }
+
+.aviso {
+        font-size: 3rem;
+        color: rgba(256,256,256,.8);
+}

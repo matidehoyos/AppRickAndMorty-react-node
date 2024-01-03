@@ -9,6 +9,9 @@ export default function Cards({characters, onClose}) {
       >   
 
       {
+         !characters.length
+         ? <h2 className={style.aviso}>Ingrese el ID del personaje..</h2>
+         :
          characters.map(character => (
             <Card
                key={character.id}

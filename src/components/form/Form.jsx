@@ -9,7 +9,7 @@ export default function Form(props) {
     const [userData, setUserData] = useState({email: "", password: ""});
 
     const handleChange = (event) => {
-        const { name, value } = event.target;
+        const [ name, value ] = event.target;
         setUserData({
             ...userData,
             [name]: value
