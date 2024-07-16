@@ -2,13 +2,13 @@ import './App.css';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import { Route, Routes, useLocation, useNavigate } from "react-router-dom";
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { removeFav } from './redux/actions.js';
 import Cards from './components/cards/Cards.jsx';
 import Nav from './components/nav/Nav.jsx';
 import About from './components/about/About.jsx';
 import Detail from './components/detail/Detail.jsx';
-import NotFound from './components/notFound/notfound.jsx';
+import NotFound from './components/notFound/NotFound.jsx';
 import Form from './components/form/Form.jsx';
 import Favorites from './components/favorites/Favorites.jsx';
 
