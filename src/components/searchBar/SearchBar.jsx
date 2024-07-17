@@ -29,10 +29,10 @@ export default function SearchBar(props) {
             id='search'
             value={id}
             onChange={handleChange} 
-            placeholder="Ingrese n° id (1-626)"
+            placeholder="INSERT ID NUMBER(1-626) ..."
          />
-          <button onClick={handleClick} className={style.botonSearch}>AddCharacter</button> 
-          <button onClick={handleRandon} className={style.botonSearch}>AddRandom</button>
+          <button onClick={handleClick} className={style.botonSearch}>Search</button> 
+          <button onClick={handleRandon} className={style.botonRandon}>AddRandom</button>
       </div>
    );
 }

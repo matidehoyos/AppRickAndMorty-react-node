@@ -44,7 +44,7 @@ const Favorites = ({onClose}) => {
          <div className={style.cardsContainer}>
             {
                !myFavorites.length
-               ? <h2 className={style.aviso}>Aun no hay favoritos...</h2>
+               ? <h2 className={style.aviso}>THERE ARE NOT FAVORITES YET...</h2>
                : myFavorites.map(myFavorite => (
                   <Card
                      key={myFavorite.id}

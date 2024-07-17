@@ -1,25 +1,57 @@
 .container {
    display: flex;
-   align-items: flex-end;
+    align-items: stretch;
+    height: 34px;
+    overflow: hidden;
 }
 
 .container input {
     height: auto;
-    width: 220px;
-    padding: 10px 5px;
-    padding-bottom: 2px;
+    width: 260px;
+    padding: auto 0;
+    padding-left: 6px;
     margin: 0;
     background-color: #848484;
     border: none;
-    color: #000;
+    color: #d9d9d9;
     border-radius: 4px;
+    font-size: 14px;
+    font-weight: 600;
 }
 
 .container input::placeholder {
     color: #000;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.container input:focus {
+    outline: none;
+    background-color: #3a3a3a;
 }
 
 .botonSearch {
+    height: auto;
+    margin: 0;
+    padding: 0 8px;
+    font-size: 14px;
+    background-color: #5e5e5e;
+    color: #ffffff;
+    border: none;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    position: relative;
+    left: -25px;
+    transition: all 0.4s ease;
+}
+
+.botonSearch:hover {
+    background-color: rgb(0, 255, 0);
+    color: rgb(0, 0, 0);
+    font-weight: 600;
+}
+
+.botonRandon {
     margin-left: 10px;
     padding: 0;
     background-color: transparent;
@@ -27,8 +59,7 @@
     border: none;
 }
 
-.botonSearch:hover {
-    color: rgb(0, 107, 0);
-    border: none;
+.botonRandon:hover {
+    color: rgb(0, 143, 0);
 }
 

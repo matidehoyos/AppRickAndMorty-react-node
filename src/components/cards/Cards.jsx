@@ -10,7 +10,7 @@ export default function Cards({characters, onClose}) {
 
       {
          !characters.length
-         ? <h2 className={style.aviso}>Ingrese el ID del personaje..</h2>
+         ? <h2 className={style.aviso}>INSERT ID NUMBER...</h2>
          :
          <div className={style.cardsContainer}>
          {
