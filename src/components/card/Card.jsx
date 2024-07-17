@@ -50,13 +50,13 @@ export default function Card(props) {
                   }
                   <button className={style.botonCerrar} onClick={() => props.onClose(props.id)}>X</button> 
               </div>
-               <h2>{props.name}</h2>  
-               <h4>Id: {props.id}</h4>
-               <h4>Status: {props.status}</h4>
-               <h4>Species: {props.species}</h4>
-               <h4>Gender: {props.gender}</h4>
-               <h4>Origin: {props.origin}</h4>
                <Link to={`/detail/${props.id}`} >
+               <h2>{props.name}</h2>  
+               <h4>Id: <span>{props.id}</span></h4>
+               <h4>Status: <span>{props.status}</span></h4>
+               <h4>Species: <span>{props.species}</span></h4>
+               <h4>Gender: <span>{props.gender}</span></h4>
+               <h4>Origin: <span>{props.origin}</span></h4>
                      <img src={props.image} alt={props.name} />
                </Link>
       </div>

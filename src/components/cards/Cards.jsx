@@ -12,6 +12,8 @@ export default function Cards({characters, onClose}) {
          !characters.length
          ? <h2 className={style.aviso}>Ingrese el ID del personaje..</h2>
          :
+         <div className={style.cardsContainer}>
+         {
          characters.map(character => (
             <Card
                key={character.id}
@@ -23,8 +25,9 @@ export default function Cards({characters, onClose}) {
                origin={character.origin.name}
                image={character.image}
                onClose={onClose}
-            />
-         ))
+               />
+         ))}
+         </div>
       }
    </div>
     )

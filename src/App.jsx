@@ -6,7 +6,6 @@ import { useDispatch } from 'react-redux';
 import { removeFav } from './redux/actions.js';
 import Cards from './components/cards/Cards.jsx';
 import Nav from './components/nav/Nav.jsx';
-import About from './components/about/About.jsx';
 import Detail from './components/detail/Detail.jsx';
 import NotFound from './components/notFound/NotFound.jsx';
 import Form from './components/form/Form.jsx';
@@ -82,10 +81,6 @@ function App() {
             <Route
                path='/home'
                element={<Cards characters={characters} onClose={onClose} />}>
-            </Route>
-            <Route
-               path='/about'
-               element={<About />}>
             </Route>
             <Route
                path='/detail/:id'

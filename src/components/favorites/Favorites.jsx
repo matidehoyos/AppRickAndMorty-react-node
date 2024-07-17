@@ -41,7 +41,7 @@ const Favorites = ({onClose}) => {
                      <option value="unknown">unknown</option>
             </select>
          </div>
-         <div>
+         <div className={style.cardsContainer}>
             {
                !myFavorites.length
                ? <h2 className={style.aviso}>Aun no hay favoritos...</h2>

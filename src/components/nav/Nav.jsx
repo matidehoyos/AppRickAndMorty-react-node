@@ -1,10 +1,15 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import SearchBar from "../searchBar/SearchBar";
 import style from "./Nav.module.css";
 
 export default function Nav(props) {
     return (
        <div className={style.container}>
+          <Link to='/home'>
+            <div className={style.logo}>
+                <img src="./logo.png" alt="" />
+            </div>
+          </Link>
             <SearchBar onSearch={props.onSearch} />
             <div className={style.menu}>
               <NavLink to='/home'>
@@ -13,10 +18,6 @@ export default function Nav(props) {
               <NavLink to='/favorites'>
                 <button className={style.menuBoton} >Favorites</button> 
               </NavLink>
-              <NavLink to='/about'>
-                <button className={style.menuBoton}>About</button> 
-              </NavLink> 
-            <button className={style.menuBoton}  onClick={props.logout}>Log out</button> 
            </div> 
        </div>
     );
