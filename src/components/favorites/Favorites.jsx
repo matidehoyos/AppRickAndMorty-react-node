@@ -26,21 +26,26 @@ const Favorites = ({onClose}) => {
 
     return (
         <div className={style.container}>
-         <div>
-            <select name="order"
-                    onChange={handleOrder}>
-                     <option value="A">Ascendente</option>
-                     <option value="D">Descendiente</option>
-            </select>
-            <select name="filter"
-                     onChange={handleFilter}>
-                     <option value="all">All</option>
-                     <option value="Male">Male</option>
-                     <option value="Female">Female</option>
-                     <option value="Genderless">Genderless</option>
-                     <option value="unknown">unknown</option>
-            </select>
-         </div>
+         {
+            myFavorites.length ? (
+                     <div>
+                        <select name="order"
+                              onChange={handleOrder}>
+                                 <option value="A">Ascendente</option>
+                                 <option value="D">Descendiente</option>
+                        </select>
+                        <select name="filter"
+                                 onChange={handleFilter}>
+                                 <option value="all">All</option>
+                                 <option value="Male">Male</option>
+                                 <option value="Female">Female</option>
+                                 <option value="Genderless">Genderless</option>
+                                 <option value="unknown">unknown</option>
+                        </select>
+                     </div>
+            ) 
+            : null
+         }
          <div className={style.cardsContainer}>
             {
                !myFavorites.length
