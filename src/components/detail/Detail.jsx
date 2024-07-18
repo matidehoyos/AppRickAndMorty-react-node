@@ -15,7 +15,7 @@ export default function Detail(props) {
             if (data.name) {
                 setCharacter(data);
             } else {
-                window.alert('No hay personajes con ese ID');
+                window.alert('There are no personajes with that ID');
             }
         }
     );
@@ -25,18 +25,20 @@ export default function Detail(props) {
 
     return (
         <div className={style.container}>
-        <h3>Detail</h3>
-            <div className={style.txtContainer}> 
-                <div className={style.txt}> 
-                    <h2>{character.name}</h2>
-                    <h4>Status: <span>{character.status}</span></h4>
-                    <h4>Specie: <span>{character.species}</span></h4>
-                    <h4>Gender: <span>{character.gender}</span></h4>
-                    <h4>Origin: <span>{character.origin?.name}</span></h4>
-                    <h4>Location: <span>{character.location?.name}</span></h4>
-                </div>
+            <div className={style.bg}></div>
+            <div className={style.box}> 
                 <img src={character.image} alt={character.name} />
-            </div>
+                <div className={style.texto}>
+                     <h6 className={style.titu}>{character.name}</h6>
+                    <div className={style.info}>
+                        <p>Specie: <span>{character.species}</span></p>
+                        <p>Gender: <span>{character.gender}</span></p>
+                        <p>Origin: <span>{character.origin?.name}</span></p>
+                        <p>Location: <span>{character.location?.name}</span></p>
+                        <p>Status: <span>{character.status}</span></p>
+                    </div>
+                </div>
+          </div>
         </div>
     )
 }

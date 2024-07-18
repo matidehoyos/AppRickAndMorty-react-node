@@ -4,10 +4,7 @@ import style from "./Cards.module.css";
 
 export default function Cards({characters, onClose}) {
    return (
-   <div
-       className={style.container}
-      >   
-
+   <div className={style.container}>   
       {
          !characters.length
          ? <h2 className={style.aviso}>INSERT ID NUMBER...</h2>

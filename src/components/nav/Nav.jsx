@@ -7,7 +7,7 @@ export default function Nav(props) {
        <div className={style.container}>
           <Link to='/home'>
             <div className={style.logo}>
-                <img src="./logo.png" alt="" />
+                <img src="./logo.png" alt="logo" />
             </div>
           </Link>
             <SearchBar onSearch={props.onSearch} />
