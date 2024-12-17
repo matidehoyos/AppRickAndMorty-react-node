@@ -9,19 +9,19 @@ lerna-debug.log*
 
 # Dependency directories
 node_modules/
-Server/node_modules/
-dist/
-dist-ssr/
+Server/node_modules
+/Server/node_modules
 
 # Build directories
 build/
+dist/
+dist-ssr/
 .tmp/
 
 # Local environment files
 .env
+.env.*
 .env.*.local
-*.local
-.gitignore
 
 # Editor directories and files
 .vscode/
@@ -41,7 +41,6 @@ ehthumbs.db
 *.seed
 *.pid
 *.pid.lock
-
 
 # Ignore test coverage
 coverage/

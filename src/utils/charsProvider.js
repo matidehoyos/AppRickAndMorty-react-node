@@ -1,11 +1,12 @@
 import axios from 'axios';
+const serverUrl = import.meta.env.VITE_SERVER_URL;
 
 
 const charsProvider = {
     
     async getChars() {
         try {
-            const chars = await axios(`http://localhost:3001/r&m/characters`)
+            const chars = await axios(`${serverUrl}/characters`)
             return chars.data;
         } catch (error) {
             console.error(error.message)
@@ -15,7 +16,7 @@ const charsProvider = {
 
     async getCharByName(name) {
         try {
-            const char = await axios(`http://localhost:3001/r&m/character/name/${name}`)
+            const char = await axios(`${serverUrl}/character/name/${name}`)
             return char.data;
         } catch (error) {
             console.error(error.message)
@@ -25,7 +26,7 @@ const charsProvider = {
 
     async getCharById(id) {
         try {
-            const char = await axios(`http://localhost:3001/r&m/character/${id}`)
+            const char = await axios(`${serverUrl}/character/${id}`)
             return char.data;
         } catch (error) {
             console.error(error.message)

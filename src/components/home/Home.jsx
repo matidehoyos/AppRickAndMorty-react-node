@@ -3,6 +3,7 @@ import Cards from "../cards/Cards";
 import style from "./Home.module.css";
 import Searched from "../searched/Searched";
 import axios from 'axios';
+const serverUrl = import.meta.env.VITE_SERVER_URL;
 
 
 
@@ -14,7 +15,7 @@ export default function Home({searched, setSearched}) {
 
     const fetchCharacters = async () => {
         try {
-            const { data } = await axios.get(`http://localhost:3001/r&m/characters?page=${currentPage}`);
+            const { data } = await axios.get(`${serverUrl}/characters?page=${currentPage}`);
             setCharacters(data.results); 
             setTotalPages(data.info.pages); 
         } catch (error) {
