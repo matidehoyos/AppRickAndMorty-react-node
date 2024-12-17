@@ -3,6 +3,7 @@ import Cards from "../cards/Cards";
 import style from "./Home.module.css";
 import Searched from "../searched/Searched";
 import axios from 'axios';
+import Loader from "../loader/Loader";
 const serverUrl = import.meta.env.VITE_SERVER_URL;
 
 
@@ -27,8 +28,10 @@ export default function Home({searched, setSearched}) {
         fetchCharacters(currentPage);
     }, [currentPage]);
 
+
     return (
         <div className={style.container}>
+            <Loader/>
             { searched && <Searched character={searched} setSearched={setSearched}/>}
             <Cards characters={characters} totalPages={totalPages} currentPage={currentPage} setCurrentPage={setCurrentPage}/>
         </div>

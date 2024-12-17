@@ -12,11 +12,14 @@ export default function Nav({setSearched}) {
             </Link>
             <SearchBar setSearched={setSearched}/>
             <div className={style.menu}>
-              <Link to='/'>
+              <Link to='/' className={style.home}>
                 <button className={style.menuBoton}>Home</button> 
               </Link>
-              <Link to='/favorites'>
-                <button className={style.menuBoton} >Favorites</button> 
+              <Link to='/favorites' className={style.favorites}>
+                <button className={style.menuBoton}>Favorites</button> 
+              </Link>
+              <Link to='/favorites' className={style.favoritesMov}>
+                <button className={style.menuBoton}>Favs</button> 
               </Link>
            </div> 
        </div>

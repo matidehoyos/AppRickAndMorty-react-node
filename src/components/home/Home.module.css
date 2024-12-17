@@ -4,3 +4,12 @@
     overflow: hidden;
 }
 
+
+
+
+@media (max-width: 600px) {
+    .container {
+        height: auto;
+        padding-top: 90px;
+    }
+}

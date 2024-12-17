@@ -49,3 +49,63 @@
 .botonSearch:hover {
     color: rgb(0, 230, 0);
 }
+
+
+
+
+
+
+
+@media (max-width: 600px) {
+    .container {
+        width: auto;
+        height: auto;
+        display: flex;
+        align-items: stretch;
+        justify-content: space-between;
+        overflow: hidden;
+        background-color: transparent;
+        padding-right: 8px;
+        border-radius: 6px;
+        border: 1px solid #aaa;
+    }
+    
+    .container input {
+        height: auto;
+        width: 120px;
+        padding: 6px 0;
+        padding-left: 6px;
+        margin: 0;
+        background-color: transparent;
+        border: none;
+        color: #d9d9d9;
+        font-size: 14px;
+        font-weight: 600;
+    }
+    
+    .container input::placeholder {
+        color: #aaa;
+        font-size: 14px;
+        font-weight: 600;
+        letter-spacing: 0;
+    }
+    
+    .container input:focus {
+        outline: none;
+    }
+    
+    .botonSearch {
+        height: auto;
+        margin: 0;
+        padding: 0;
+        font-size: 14px;
+        border: none;
+        background-color: transparent;
+        color: #aaa;
+        transition: all 0.4s ease;
+    }
+    
+    .botonSearch:hover {
+        color: #aaa;
+    }
+}
