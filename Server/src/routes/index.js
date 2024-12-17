@@ -1,6 +1,6 @@
 const router = require("express").Router();
+const getCharByID = require("../controllers/getCharById.js");
 const getCharByName = require("../controllers/getCharByName.js");
-const getCharByID = require("../controllers/getCharByID.js");
 const getChars = require("../controllers/getChars.js");
 
 router.get("/characters", getChars);
