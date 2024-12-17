@@ -10,16 +10,16 @@
     animation: bg 6s ease-out infinite;
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 4000px;
+    background-size: 5000px;
 }
 
 
 @keyframes bg {
     0% {
-        background-size: 4000px; 
+        background-size: 5000px; 
     }
     30% {
-        background-size: 2000px; 
+        background-size: 2500px; 
     }
     100% {
         background-size: 0px; 

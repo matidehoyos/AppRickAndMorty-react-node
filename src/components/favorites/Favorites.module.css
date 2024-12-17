@@ -30,8 +30,24 @@
     justify-content: center;
     align-items: center;
     background-image: url('/bg1.jpeg');
-    background-size: cover;
-}
+    animation: bg 10s ease-out infinite;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 5000px;
+    }
+
+    @keyframes bg {
+        0% {
+            background-size: 5000px; 
+        }
+        50% {
+            background-size: 2500px; 
+        }
+        100% {
+            background-size: 0px; 
+        }
+    }
+
 
 .notContainer h3 {
         width: auto;
@@ -83,23 +99,6 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        background-image: url('/bg1.jpeg');
-        animation: bg 30s ease-out infinite;
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: 2000px;
-    }
-
-    @keyframes bg {
-        0% {
-            background-size: 2000px; 
-        }
-        50% {
-            background-size: 600px; 
-        }
-        100% {
-            background-size: 10px; 
-        }
     }
     
     .notContainer h3 {
