@@ -1,0 +1,33 @@
+.paginator {
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    padding: 25px 0;
+    margin-top: 20px;
+}
+
+.boton {
+    background-color: #000;
+    border: .3px solid rgb(0, 210, 0);
+    padding: 6px 12px;
+    font-size: 16px;
+    transition: all .6s ease;
+}
+
+.boton:hover {
+    background-color: rgb(0, 210, 0);
+    border: .3px solid transparent;
+}
+
+.boton:disabled {
+    border: .3px solid #aaaaaa44;
+    color: #aaaaaa2e;
+}
+
+.boton:disabled:hover {
+    border: .3px solid #aaaaaa44;
+    color: #aaaaaa2e;
+    background-color: transparent;
+}

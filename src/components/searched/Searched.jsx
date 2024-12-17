@@ -1,19 +1,6 @@
-import style from "./Detail.module.css";
-import { useEffect, useState } from "react";
-import charsProvider from "../../utils/charsProvider";
+import style from "./Searched.module.css";
 
-export default function Detail({id, setDetalle}) {
-    const [character,setCharacter] = useState({});
-
-    const getChar = async () => {
-        const char = await charsProvider.getCharById(id);
-        setCharacter(char)
-    }
-
-    useEffect(() => {
-        getChar()
-    }, []);
-
+export default function Searched ({character, setSearched}) {
 
     return (
         <div className={style.container}>
@@ -28,7 +15,7 @@ export default function Detail({id, setDetalle}) {
                         <p>Origin: <span>{character.origin?.name}</span></p>
                         <p>Location: <span>{character.location?.name}</span></p>
                         <p>Status: <span>{character.status}</span></p>
-                        <button className={style.cierre} onClick={() => setDetalle(false)}>Go BACK</button>
+                        <button className={style.cierre} onClick={() => setSearched(null)}>Go BACK</button>
                     </div>
                 </div>
         </div>

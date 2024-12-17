@@ -1,31 +1,23 @@
+import { useState } from "react";
 import Card from "../card/Card";
 import style from "./Cards.module.css";
+import Detail from "../detail/Detail";
+import Paginator from "../paginator/Paginator";
 
 
-export default function Cards({characters, onClose}) {
+export default function Cards({characters, totalPages, currentPage, setCurrentPage}) {
+   const [ detalle, setDetalle ] = useState(false);
+   const [ id, setId ] = useState('');
+
    return (
    <div className={style.container}>   
-      {
-         !characters.length
-         ? <h2 className={style.aviso}>INSERT ID NUMBER...</h2>
-         :
-         <div className={style.cardsContainer}>
-         {
-         characters.map(character => (
-            <Card
-               key={character.id}
-               id={character.id}
-               name={character.name}
-               status={character.status}
-               species={character.species}
-               gender={character.gender}
-               origin={character.origin.name}
-               image={character.image}
-               onClose={onClose}
-               />
-         ))}
-         </div>
-      }
+      { detalle &&  <Detail id={id} detalle={detalle} setDetalle={setDetalle} /> }      
+      <div className={style.cardsContainer}>
+            { characters.map(char => (
+               <Card key={char.id} char={char} setDetalle={setDetalle} detalle={detalle} setId={setId} />
+            ))}
+      </div> 
+      <Paginator totalPages={totalPages} currentPage={currentPage} setCurrentPage={setCurrentPage} />
    </div>
-    )
-}
+
+)}

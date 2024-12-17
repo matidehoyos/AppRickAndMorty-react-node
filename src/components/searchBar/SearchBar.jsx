@@ -1,38 +1,38 @@
 import { useState } from "react";
 import style from "./SearchBar.module.css"
+import { FaSearch } from "react-icons/fa";
+import charsProvider from "../../utils/charsProvider";
+import { useNavigate } from "react-router-dom";
 
-export default function SearchBar(props) {
-
-   const [id, setId] = useState("");
+export default function SearchBar({setSearched}) {
+   const [name, setName] = useState("");
+   const navigate = useNavigate();
    
    const handleChange = event => {
    const {value} = event.target; 
-   setId(value);
+   setName(value);
    }
 
-   const handleClick = event => {
-      event.preventDefault();
-      props.onSearch(id);
-      setId("");
+   const handleClick = async (e) => {
+      e.preventDefault();
+      const searched = await charsProvider.getCharByName(name);
+      setSearched(searched);
+      setName("");
+      navigate('/')
    }
 
-   const handleRandon = () => {
-         const randomNumber = Math.floor(Math.random() * 826) + 1;
-         props.onSearch(randomNumber);
-   }
 
    return (
-      <div className={style.container} >
+      <label className={style.container} >
           <input 
             type='text'
             name='search'
             id='search'
-            value={id}
+            value={name}
             onChange={handleChange} 
-            placeholder="INSERT ID NUMBER(1-626) ..."
+            placeholder="Insert name..."
          />
-          <button onClick={handleClick} className={style.botonSearch}>Insert</button> 
-          <button onClick={handleRandon} className={style.botonRandon}>AddRandom</button>
-      </div>
+          <button onClick={handleClick} className={style.botonSearch}><FaSearch /></button> 
+      </label>
    );
 }
