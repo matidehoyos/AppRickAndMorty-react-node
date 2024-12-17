@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const getCharById = require("../controllers/getCharById.js");
+const getCharById = require("../controllers/getcharByID.js");
 const getCharByName = require("../controllers/getCharByName.js");
 const getChars = require("../controllers/getChars.js");
 
