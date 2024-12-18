@@ -9,6 +9,7 @@ export default function Cards({characters, totalPages, currentPage, setCurrentPa
    const [ detalle, setDetalle ] = useState(false);
    const [ id, setId ] = useState('');
 
+
    return (
    <div className={style.container}>   
       { detalle &&  <Detail id={id} detalle={detalle} setDetalle={setDetalle} /> }      

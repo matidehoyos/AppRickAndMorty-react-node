@@ -1,18 +1,22 @@
 .paginator {
+    width: 100%;
     background-color: #000;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 12px;
-    padding: 0;
-    padding-bottom: 25px;
+    padding: 6px 0;
+    padding-bottom: 8px;
+    position: absolute;
+    bottom: 0;
+    z-index: 5000;
 }
 
 .boton {
     background-color: #000;
     border: .3px solid rgb(0, 210, 0);
     padding: 6px 12px;
-    font-size: 16px;
+    font-size: 14px;
     transition: all .6s ease;
 }
 
@@ -38,36 +42,43 @@
 
 @media (max-width: 600px) {
     .paginator {
+        width: 100%;
         background-color: #000;
         display: flex;
         justify-content: center;
         align-items: center;
         gap: 12px;
-        padding: 0;
-        padding-bottom: 0px;
+        padding: 15px 0;
+        padding-bottom: 20px;
+        position: absolute;
+        bottom: 0;
     }
     
     .boton {
         background-color: #000;
-        border: .3px solid rgb(0, 210, 0);
+        border: 1px solid rgb(0, 210, 0);
         padding: 6px 12px;
         font-size: 16px;
         transition: all .6s ease;
+        color: #eee;
     }
     
     .boton:hover {
-        background-color: rgb(0, 210, 0);
-        border: .3px solid transparent;
+        background-color: #000;
+        border: 1px solid rgb(0, 210, 0);
     }
     
     .boton:disabled {
-        border: .3px solid #aaaaaa44;
+        border: 1px solid #aaaaaa44;
         color: #aaaaaa2e;
     }
     
     .boton:disabled:hover {
-        border: .3px solid #aaaaaa44;
+        border: 1px solid #aaaaaa44;
         color: #aaaaaa2e;
-        background-color: transparent;
+    }
+
+    span {
+        color: #aaa;
     }
 }
