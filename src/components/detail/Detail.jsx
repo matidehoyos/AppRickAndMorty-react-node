@@ -4,6 +4,7 @@ import charsProvider from "../../utils/charsProvider";
 
 export default function Detail({id, setDetalle}) {
     const [character,setCharacter] = useState({});
+    const [loading, setLoading] = useState(true);
 
     const getChar = async () => {
         const char = await charsProvider.getCharById(id);
@@ -14,9 +15,16 @@ export default function Detail({id, setDetalle}) {
         getChar()
     }, []);
 
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            setLoading(false);
+        }, 1000); 
+        return () => clearTimeout(timer);
+      }, []);
+
 
     return (
-        <div className={style.container}>
+        <div className={style.container} style={{opacity: loading ? '0' : '1'}}>
                 <div className={style.image}>
                      <img src={character.image} alt={character.name} />
                 </div>

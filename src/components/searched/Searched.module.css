@@ -114,7 +114,7 @@
         left: 0;
         z-index: 10000;
         background-color: #050505;
-        padding: 10px;
+        padding: 16px;
         overflow: hidden;
     }
     
@@ -127,7 +127,7 @@
     }
     
     .image img {
-        width: 68%;
+        width: 80%;
         height: auto;
         object-fit: cover;
         border-radius: 4px;
@@ -141,13 +141,15 @@
         justify-content: start;
         align-items: start;
         padding: 0;
+        padding-top: 5px;
         margin: 0;
     }
     
     .titu {
-        font-size: 32px;
-        font-weight: 700;
-        color: #fff;
+        font-size: 24px;
+        line-height: 25px;
+        font-weight: 600;
+        color: rgb(0, 199, 0);
         text-align: left;
         text-shadow: 0px 0px 3px #000;
         padding: 0;
@@ -161,7 +163,7 @@
         flex-direction: column;
         justify-content: start;
         align-items: start;
-        padding-top: 0;
+        padding-top: 10px;
     }
     
     .info p {
@@ -173,6 +175,7 @@
         padding: 0;
         letter-spacing: .4px;
         text-shadow: 0px 0px 4px #000;
+        line-height: 30px;
     }
     
     .info p span {
@@ -182,7 +185,7 @@
     }
     
     .cierre {
-        margin-top: 20px;
+        margin-top: 15px;
         border: 1px solid green;
         color: green;
         background-color: transparent;
@@ -192,6 +195,6 @@
     }
     
     .cierre:hover {
-        transform: scale(1.05);
+        transform: scale(1);
     }
 }

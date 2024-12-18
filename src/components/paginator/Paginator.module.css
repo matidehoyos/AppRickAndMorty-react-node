@@ -43,6 +43,7 @@
 @media (max-width: 600px) {
     .paginator {
         width: 100%;
+        height: auto;
         background-color: #000;
         display: flex;
         justify-content: center;
